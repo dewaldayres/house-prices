@@ -6,6 +6,17 @@
 rm(list = ls())
 
 
+# ====================
+# source all functions
+# ====================
+
+source_path <- "./src/data_preparation/"
+files <- list.files(source_path)
+
+for (f in files)
+  source(paste(source_path,f, sep=""))
+
+
 # ============
 # loading data
 # ============
@@ -23,6 +34,24 @@ test$Set <- "test"
 test$SalePrice <- NA
 
 houses <- rbind(train, test)
+
+
+# ===============
+# column mappings 
+# ===============
+
+houses <- column_mappings(houses)
+
+
+# =============
+# data mappings 
+# =============
+
+houses <- data_mapping_zoning(houses)
+houses <- data_mapping_street(houses)
+houses <- data_mapping_alley(houses)
+houses <- data_mapping_lot_shape(houses)
+houses <- data_mapping_land_contour(houses)
 
 
 # ============
