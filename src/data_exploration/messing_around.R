@@ -53,8 +53,8 @@ ggplot() +
   labs(title="Sale price by neighborhood", 
        x="Lot Area", 
        y="Sale Price") +
-  scale_color_manual(values = colorRampPalette(brewer.pal(8, "Accent"))(25)) + 
- #  scale_y_continuous(breaks=seq(0,700000,by=50000), label=scales::comma) +
+ # scale_color_manual(values = colorRampPalette(brewer.pal(8, "Accent"))(25)) + 
+   scale_y_continuous(breaks=seq(0,700000,by=50000), label=scales::comma) +
   theme(plot.title=element_text(hjust=0.5), 
         legend.position="none") 
 
