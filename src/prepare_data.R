@@ -47,17 +47,16 @@ houses <- column_mappings(houses)
 # data mappings 
 # =============
 
-houses <- data_mapping_zoning(houses)
-houses <- data_mapping_street(houses)
-houses <- data_mapping_alley(houses)
-houses <- data_mapping_lot_shape(houses)
-houses <- data_mapping_land_contour(houses)
-houses <- data_mapping_utilities(houses)
-houses <- data_mapping_lot_config(houses)
-houses <- data_mapping_land_slope(houses)
-houses <- data_mapping_neighbourhood(houses)
-houses <- data_mapping_condition_1(houses)
-houses <- data_mapping_condition_2(houses)
+houses <- data_mappings(houses)
+
+
+# ================
+# data imputations 
+# ================
+
+# 
+# year_remodelling - create new column to indicate Y or N if year built differs from year remodelled
+# 
 
 # ============
 # post-cleanup
